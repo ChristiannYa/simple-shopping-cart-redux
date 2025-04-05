@@ -8,7 +8,7 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className="bg-neutral-700 w-full">
+    <div className="bg-neutral-700 w-full p-2">
       <h2 className="text-2xl text-center">Your Cart</h2>
 
       <div>
@@ -19,11 +19,12 @@ const Cart = () => {
             {cartItems.map((item) => (
               <CartItem key={item.id} item={item} />
             ))}
+            <hr className="my-3 text-white/20" />
             <CartTotal />
             <div className="p-2 text-end">
               <button
                 onClick={() => dispatch(clearCart())}
-                className="px-2 py-0.5 text-sm hover:cursor-pointer"
+                className="text-xs hover:cursor-pointer hover:underline"
               >
                 Clear Cart
               </button>

@@ -5,7 +5,7 @@ const CartTotal = () => {
   const totalPrice = useSelector(selectCartTotal);
 
   return (
-    <div className="mr-1 text-right font-mono">
+    <div className="mr-2 text-right">
       <p>
         Total price: <span>{totalPrice.toFixed(2)}</span>
       </p>
